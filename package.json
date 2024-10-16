@@ -2,9 +2,9 @@
   "name": "whatsapp-web-api",
   "version": "1.26.0",
   "description": "REST API wrapper for whatsapp-web.js",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node .",
+    "start": "node app.js",
     "test": "jest --runInBand",
     "swagger": "node swagger.js"
   },
