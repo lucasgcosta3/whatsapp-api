@@ -1,0 +1,25 @@
+name: Run WhatsApp API Daily
+
+on:
+  schedule:
+    - cron: "0 8-17 * * *"  # Runs every hour, between 08:00 and 17:00.
+
+jobs:
+  run-api:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20.4.0'  # Altere para a versão Node.js que você usa
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run the app
+      run: node app.js  # Comando para rodar a sua API
+      
